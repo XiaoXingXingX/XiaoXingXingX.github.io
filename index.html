@@ -152,28 +152,52 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JSP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/Java基础/">Java基础</a>
+      <a class="article-title" href="/2019/10/21/JSP/">JSP</a>
     </h1>
   
 
         
-        <a href="/2019/10/09/Java基础/" class="archive-article-date">
-  	<time datetime="2019-10-09T09:41:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
+        <a href="/2019/10/21/JSP/" class="archive-article-date">
+  	<time datetime="2019-10-21T00:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#这是Java基础的内容</p>
-<h2 id="一、这里有很多很多内容"><a href="#一、这里有很多很多内容" class="headerlink" title="一、这里有很多很多内容"></a>一、这里有很多很多内容</h2>
+        <h2 id="一、JSP"><a href="#一、JSP" class="headerlink" title="一、JSP"></a>一、JSP</h2><p>前端开发：HTML、CSS、JS(JavaScript)</p>
+<p>企业中前端工程师：使用前端框架(BootStrap/easyUI/VUE/Angular)开发。</p>
+<p>后端开发：JavaSE、JSP、JavaWeb(良好的稳定性、健壮性优于其它语言。企业级应用首选之一) </p>
+<p>企业中的后端工程师：使用后端框架(SpringMVC/Struts2、Spring、myBatis)开发。<br>“全栈工程师”</p>
+<p>C语言:工业控制、嵌入式设备(电磁炉、吸尘器、微波炉。。。)。</p>
+<h2 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h2><p>JSP项目是在后台开发框架成熟前使用较多的一种JavaWeb技术，后期会逐渐过度到后台框架。 jvm只能处理java编译的class文件。<br>JSP和后台框架<br>核心技术均为Servlet Servlet在jdk中的包为：javax.servlet.http.HttpServlet。<br>Servlet<br>1.jsp和servlet的区别和联系：</p>
+<pre><code>1). jsp经编译后就变成了Servlet. (JSP的本质就是Servlet，JVM只能识别java 的类(.class)，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类) 
+
+2).jsp更擅长表现于页面显示,servlet更擅长于逻辑控制.
+
+3).Servlet中没有内置对象，Jsp中的内置对象都是必须通过
+HttpServletRequest对象，HttpServletResponse对象以及HttpServlet对象得到. Jsp是Servlet的一种简化， 使用Jsp只需要完成程序员需要输出到客户端的内容，Jsp中的Java脚本如何镶嵌到一个类中，由Jsp容器完成。 而Servlet则是个完整的Java类，这个类的Service方法用于生成对客户端的响应。</code></pre><p>2.联系：</p>
+<p>JSP是Servlet技术的扩展，本质上就是Servlet的简易方式。JSP编译后是“类servlet”。Servlet和JSP最主要的不同点在于：</p>
+<p>Servlet的应用逻辑是在Java文件中，并且完全从表示层中的HTML里分离开来。（jsp里面是有html标签， servlet没有html标签）</p>
+<p>而JSP的情况是Java和HTML可以组合成一个扩展名为.jsp的文件。(JSP=java类+HTML)</p>
+<p>JSP侧重于视图，Servlet主要用于控制逻辑。(JSP不能脱离Servlet，但Servelet可独立存在)<br>Servlet更多的是类似于一个Controller，用来做控制。<br>servlet类中的方法<br>servlet中的方法<br>doGet()方法：用get方式传输网络数据 get方式：明文传参(地址栏显示)、传输数据较小、</p>
+<p>doPost()方法：用post方式传输网络数据 post方式：暗文传参(地址栏不显示)、传输数据较大、</p>
+<p>页面跳转方式</p>
+<p>页面跳转的方式分类：</p>
+<p>1.转发：foward(地址栏URL不变)</p>
+<p>2.重定向：redirect(地址栏URL变化)</p>
+<p>3.两种跳转方式异同：</p>
+<p>转发使用的是getRequestDispatcher()方法;重定向使用的是sendRedirect(); 转发：浏览器URL的地址栏不变。重定向：浏览器URL的地址栏改变；<br>转发是服务器行为，重定向是客户端行为；</p>
+<p>转发是浏览器只做了一次访问请求。重定向是浏览器做了至少两次的访问请求；</p>
+<p>转发2次跳转之间传输的信息不会丢失，重定向2次跳转之间传输的信息会丢失（request范围）。</p>
+
       
 
       
@@ -185,7 +209,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/Java基础/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/21/JSP/">展开全文 >></a>
         </p>
       
 
