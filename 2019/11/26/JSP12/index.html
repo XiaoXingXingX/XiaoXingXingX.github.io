@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>JSP | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="JSP中的JSTL表达式JSTL比EL更强大: 使用前提:        加入:    jstl.jar包     &amp;lt;搜索时后加mvn&amp;gt;             standard.jar包        &amp;lt;搜索时后加mvn&amp;gt; 引用声明:        &amp;lt;%@ taglib uri=&amp;quot;http://java.sun.com/jsp/jstl/core&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP">
+<meta property="og:url" content="http://yoursite.com/2019/11/26/JSP12/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JSP中的JSTL表达式JSTL比EL更强大: 使用前提:        加入:    jstl.jar包     &amp;lt;搜索时后加mvn&amp;gt;             standard.jar包        &amp;lt;搜索时后加mvn&amp;gt; 引用声明:        &amp;lt;%@ taglib uri=&amp;quot;http://java.sun.com/jsp/jstl/core&amp;quot">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-25T00:28:25.589Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="JSP">
+<meta name="twitter:description" content="JSP中的JSTL表达式JSTL比EL更强大: 使用前提:        加入:    jstl.jar包     &amp;lt;搜索时后加mvn&amp;gt;             standard.jar包        &amp;lt;搜索时后加mvn&amp;gt; 引用声明:        &amp;lt;%@ taglib uri=&amp;quot;http://java.sun.com/jsp/jstl/core&amp;quot">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +154,220 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JSP12" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JSP
+    </h1>
+  
+
+        
+        <a href="/2019/11/26/JSP12/" class="archive-article-date">
+  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JSP中的JSTL表达式"><a href="#JSP中的JSTL表达式" class="headerlink" title="JSP中的JSTL表达式"></a>JSP中的JSTL表达式</h2><p>JSTL比EL更强大:</p>
+<pre><code>使用前提:
+       加入:    jstl.jar包     &lt;搜索时后加mvn&gt;
+            standard.jar包        &lt;搜索时后加mvn&gt;
+引用声明:
+       &lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</code></pre><blockquote>
+<p>prefix=”c” 时值c时引用时为&lt;c:set……..&gt;<br><br>prefix=”x” 时值x时引用时为&lt;x:set……..&gt;</p>
+</blockquote>
+<p>核心标签库:</p>
+<pre><code>通用标签库:
+a.&lt;c:set/&gt;设置/赋值
+  &lt;c:set/&gt;给  某个变量   在    某个作用域中   赋值
+  如: &lt;c:set var=&quot;名&quot;    value=&quot;值&quot;         scope=&quot;requset作用域或其他作用域&quot; /&gt;
+
+  &lt;c:set/&gt;给  某个对象的属性     赋值     不需要指定作用域(因为已指定)     
+  如: &lt;c:set target=&quot;${requestScope.对象名}&quot;      property=&quot;对象的属性&quot;    value=&quot;值&quot;  /&gt;
+
+  &lt;c:set/&gt;给  某个Map对象的属性    赋值    不需要指定作用域(因为已指定)   
+  如: &lt;c:set target=&quot;${requestScope.map对象名}&quot;      property=&quot;map对象的属性&quot;    value=&quot;值&quot;  /&gt;
+
+  &lt;c:set/&gt;给  不存在变量    赋值   即先创建变量再赋值    不需要指定作用域(因为已指定) 
+  如: &lt;c:set var=&quot;名&quot;    value=&quot;值&quot;         scope=&quot;requset作用域或其他作用域&quot; /&gt;
+         但 不能     给  不存在对象的属性    赋值
+
+b.&lt;c:out  /&gt;显示输出
+  &lt;c:out value=&quot;${requestScope.对象名.属性}&quot;   default=&quot;若取值不存在或为null则   默认值为此&quot; /&gt;
+  显示连接代码但不跳转
+  &lt;c:out value=&quot;&lt;a href=&quot;https://www.baidu.com&quot;&gt;百度&lt;/a&gt;&quot;   escapeXml=&quot;true显示代码/false转换为a标签连接不显示代码&quot; /&gt;
+
+c.删除变量值
+  &lt;c:remove  var=&quot;名&quot; scope=&quot;requset作用域或其他作用域&quot; /&gt;
+
+
+条件标签库:
+    ###需要注意的是-&gt;[test=&quot;${判断内容如:2&gt;5}\/此处的空格会严重影响判断结果 因为会将判断结果和空格连接为字符串&quot;]
+ a.
+ 单重选择:
+ &lt;c:if test=&quot;${判断内容如:2&gt;5}&quot;   var=&quot;result存放判断结果&quot;   scope=&quot;requset作用域或其他作用域&quot;  /&gt;
+   显示内容或输出
+   ${requestScope.result}
+ &lt;/c:if&gt;
+ b.
+ 多重选择:
+ &lt;c:choose&gt;
+    &lt;c:when test=&quot;${判断内容如:2&gt;5}&quot;&gt;显示值1&lt;/c:when&gt;
+    &lt;c:when test=&quot;${判断内容如:4&gt;5}&quot;&gt;显示值2&lt;/c:when&gt;
+    &lt;c:when test=&quot;${判断内容如:9&gt;5}&quot;&gt;显示值3&lt;/c:when&gt;
+    &lt;c:other&gt;默认显示值4&lt;c:other&gt;
+ &lt;/c:choose&gt;
+
+
+迭代标签库:
+    ###需要注意的是-&gt;test=&quot;${判断内容如:2&gt;5}\/此处的空格会严重影响判断结果 因为会将判断结果和空格连接为字符串&quot;
+ a.普通循环
+ &lt;c:forEach  begin=&quot;开始值&quot;   end=&quot;结束值可取到此值即为&lt;=&quot;    step=&quot;变量变化如+/-1&quot; varStatus=&quot;status存放此次循环信息&quot; &gt;
+    ${status.index可得到此次循环的  下标(begin变化前的值)}
+ &lt;/c:forEach&gt;
+b.遍历集合,数组等
+ 遍历数组
+ &lt;c:forEach   var=&quot;每个变量的名如name&quot;  items=&quot;${requestScope.数组名}&quot; &gt;
+    ${name}  //即遍历数组中的name值
+ &lt;/c:forEach&gt;
+ 遍历集合
+ &lt;c:forEach   var=&quot;每个对象的名如stu&quot;  items=&quot;${requestScope.集合名}&quot; &gt;
+    ${stu.name}  //即遍历集合中的name值
+    ${stu.son}  //即遍历集合中的name值
+ &lt;/c:forEach&gt;</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/26/JSP12/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/26/JSP12/">JSP</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/26/JSP12/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/26/JSP10/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/26/JSP10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/26/JSP10/">JSP</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/26/JSP11/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/26/JSP11/">JSP</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/23/JSP9/" class="archive-article-date">
-  	<time datetime="2019-11-23T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/23/JSP9/">JSP</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/20/JSP8/" class="archive-article-date">
-  	<time datetime="2019-11-20T10:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/20/JSP8/">JSP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/15/JSP7/" class="archive-article-date">
-  	<time datetime="2019-11-15T11:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/15/JSP7/">JDBC通用连接、增删改查类</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/13/JSP6/" class="archive-article-date">
-  	<time datetime="2019-11-13T06:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/13/JSP6/">MySQL内外连接解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/08/JSP5/" class="archive-article-date">
-  	<time datetime="2019-11-08T05:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/08/JSP5/">MySQL数据库增删改查SQL语句</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/04/JSP4/" class="archive-article-date">
-  	<time datetime="2019-11-04T10:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/04/JSP4/">JSP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/JSP3/" class="archive-article-date">
-  	<time datetime="2019-10-29T02:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/JSP3/">JSP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +391,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
