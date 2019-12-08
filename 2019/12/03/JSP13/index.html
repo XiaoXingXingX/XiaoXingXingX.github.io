@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>JSP | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="JSP的过滤器1234图例:                 &amp;lt;-----响应-----      在此处被拦截     &amp;lt;---------响应--------           客户端                        过滤器                               服务器	             ------请求------&amp;gt;    在此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP">
+<meta property="og:url" content="http://yoursite.com/2019/12/03/JSP13/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JSP的过滤器1234图例:                 &amp;lt;-----响应-----      在此处被拦截     &amp;lt;---------响应--------           客户端                        过滤器                               服务器	             ------请求------&amp;gt;    在此">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-05T02:05:24.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="JSP">
+<meta name="twitter:description" content="JSP的过滤器1234图例:                 &amp;lt;-----响应-----      在此处被拦截     &amp;lt;---------响应--------           客户端                        过滤器                               服务器	             ------请求------&amp;gt;    在此">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,133 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-JSP14" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-JSP13" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/06/JSP14/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/06/JSP14/" class="archive-article-date">
-  	<time datetime="2019-12-06T05:00:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JSP面试题汇-一"><a href="#JSP面试题汇-一" class="headerlink" title="JSP面试题汇(一)"></a>JSP面试题汇(一)</h2><p>1.什么是 <code>JSP</code>？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：JavaServer Pages(JSP) 是一项支持动态内容的 Web 网页的开发技术，它可以帮助开发人员通过利用特殊的 JSP 标签在 HTML 页面中插入Java代码，这些标签大部分都是以 &lt;% 和 %&gt; 为开始。</span><br></pre></td></tr></table></figure>
-
-<p>2.使用 <code>JSP</code> 的优点是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">答：JSP 提供了如下所列的几个优势：</span><br><span class="line">    因为 JSP 允许在 HTML页面本身中嵌入动态元素而不是使用一个单独的 CGI 文件，所以性能明显更好一点。</span><br><span class="line">    JSP 在被服务器处理之前总会被编译一次，它不像 CGI/Perl 那样，每一次页面被请求时，服务器都需要加载一个解释器和目标脚本。</span><br><span class="line">    JavaServer Pages 是在 Java Servlets API 之上创建的，所以 JSP 可以像 Servlets那样也可以访问所有强大的企业级的 Java APIs，包括 JDBC，JNDI，EJB，JAXP 等等。</span><br><span class="line">    JSP 页面可以结合 servlets 进行使用，处理业务逻辑，该模型是通过 Java servlet 模板引擎支持的。</span><br></pre></td></tr></table></figure>
-
-<p>3.和 <code>ASP</code> 相比，<code>JSP</code> 的优势是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JSP 的优势是双重的。</span><br><span class="line">首先，动态的部分是用 Java 中编写的，而不是 Visual Basic 或者其他 MS 特定的语言，所以它用来更强大也更容易。</span><br><span class="line">其次，它可以很方便的移植到其他操作系统，并且是非微软 web 服务器。</span><br><span class="line">4、 如何避免`JSP`页面自动生成`Session`对象？为什么要这么做？</span><br><span class="line">a)      &lt;%@ page session=”false”&gt;</span><br><span class="line">b)      在默认情况下，在对一个JSP页面发出请求时，如果session还没建立，JSP页面会自动为请求建立一个Session对象，但是session是比较消耗资源的，如果没有必要保持和使用session，就不应该创建session</span><br></pre></td></tr></table></figure>
-
-<p>5.和单纯的 <code>Servlets</code> 相比，<code>JSP</code> 的优势是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">与通过使用大量的 `println` 语句生成的 `HTML` 相比，`JSP` 在编写（和修改）常规的 HTML上更方便。其他的优点是：</span><br><span class="line">    在 HTML 页面中嵌入 Java 代码。</span><br><span class="line">    跨平台。</span><br><span class="line">    创建数据库驱动的 web 应用程序。</span><br><span class="line">服务器端的编程功能。</span><br></pre></td></tr></table></figure>
-
-<p>6、 自定义标签要继承哪个类</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a)      可以继承TagSupport或者BodyTagSuppot，两者的差别是前者适用于没有主题的标签，而后者适用于有主题的标签</span><br><span class="line">b)      若选择TagSupport，可以实现doStartTag和doEndTag这两个方法实现Tag的功能；如果选择继承BodyTagSupport，可以实现doAfterBody这个方法</span><br></pre></td></tr></table></figure>
-
-<p>7.和服务器端包含<code>（SSI）</code>相比，<code>JSP</code> 的优势是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：SSI 只是用于简单的包裹体，而不是用于“真正的”使用表格数据的应用程序，建立数据库连接，等等。</span><br></pre></td></tr></table></figure>
-
-<p>8.和 <code>JavaScript</code> 相比，<code>JSP</code> 的优势是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：JavaScript 可以在客户端生成动态的 HTML，却不能和 web 服务器进行交互来完成复杂的任务，例如数据库的访问和图像处理等等。</span><br></pre></td></tr></table></figure>
-
-<p>9.和静态 <code>HTML</code> 相比，<code>JSP</code> 的优势是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：当然，常规的 HTML 不能包含动态信息。</span><br></pre></td></tr></table></figure>
-
-<p>10.解释一个 <code>JSP</code> 的生命周期。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">答：一个 JSP 的生命周期包含以下步骤：</span><br><span class="line">    编译：当浏览器请求一个 JSP 时，JSP 引擎首先检查是否需要编译这个页面。如果这个页面从来没有被编译过，或者 JSP 在最后一次被编译后已经被修改了，那么 JSP 引擎会编译这个页面。</span><br><span class="line">    编译过程包括三个步骤：</span><br><span class="line">        解析 JSP。</span><br><span class="line">        将 JSP 转换成一个 servlet。</span><br><span class="line">        编译这个 servlet。</span><br><span class="line">    初始化：当一个容器加载一个 JSP 时，在修改任何请求之前会调用 jsInit() 方法。</span><br><span class="line">    执行：无论何时一个浏览器请求一个 JSP 时，这个页面都会被加载并且初始化，JSP 引擎在 JSP 中调用 _jspService() 方法。一个 JSP 的 _jspService() 方法在每一次请求时都会被调用，并且为该请求负责生成响应，该方法还负责生成所有的7个 HTTP 方法的响应，也就是 GET， POST，DELETE 等等。</span><br><span class="line">    清除：当一个 JSP 被一个容器从应用中移除时是 JSP 生命周期的破坏阶段。jspDestroy() 方法相当于 servlets 中的销毁方法。</span><br></pre></td></tr></table></figure>
-
-<p>11.在 <code>JSP</code> 中一个 <code>sciptlet</code> 是什么？它的语法是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：一个 sciptlet 可以包含任意数量的 JAVA 语言的语句、变量或者方法声明，或者在页面脚本语言中有效地表达式。</span><br><span class="line">Scriptlet 的语法如下：</span><br><span class="line">&lt;% code fragment %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>12.什么是 <code>JSP</code>声明？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：一个声明可以声明一个或者多个变量或者方法，这些变量和方法你可以在后面的 JSP 文件中的 Java 代码里使用。你必须在你使用之前在 JSP 文件中定义这些 变量或方法。</span><br><span class="line">&lt;%! declaration; [ declaration; ]+ ... %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>13.什么是 <code>JSP</code> 表达式？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：一个 JSP 表达式元素包含一个被求值的脚本语言表达式，转换成一个字符串，并插入到表达式在 JSP 文件中出现的位置。</span><br><span class="line">根据 Java 语言规范，表达式元素可以包含任何有效地表达式，但是你不能使用一个分号来结束一个表达式。</span><br><span class="line">它的语法是：</span><br><span class="line">&lt;%= expression %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>14.什么是 <code>JSP</code> 注释？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：JSP 注释标记的是 JSP容器忽略的文本或者语句。一个 JSP 注释在你想要隐藏或者“注释掉”你 JSP 页面的一部分时是很有用的。</span><br><span class="line">下面的 JSP 注释的语法：</span><br><span class="line">&lt;%-- This is JSP comment --%&gt;</span><br></pre></td></tr></table></figure>
-
-<p>15.什么是 <code>JSP</code> 指令？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">答：一个 JSP 指令影响着 servlet 类的总体结构。它通常具有以下形式：</span><br><span class="line">&lt;%@ directive attribute=&quot;value&quot; %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>16.指令标签的类型是什么？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">答：指令标签的类型如下：</span><br><span class="line">    &lt;%@ page ... %&gt; : 定义 page-dependent 属性，例如脚本语言、错误页面、和缓冲需求。</span><br><span class="line">    &lt;%@ include ... %&gt; : 在翻译阶段包含一个文件。</span><br><span class="line">    &lt;%@ taglib ... %&gt; : 声明一个标签库，包含在页面中使用的自定义动作。</span><br></pre></td></tr></table></figure>
-
-<p>17.什么是 <code>JSP</code> 操作？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">答：JSP 操作使用 XML 语法结构来控制 servlet 引擎的行为。你可以动态插入一个文件、重用 JavaBeans 组件、转发用户到另一个网页，或者为 Java 插件生成 HTML。</span><br><span class="line">它的语法如下：</span><br><span class="line">&lt;jsp:action_name attribute=&quot;value&quot; /&gt;</span><br></pre></td></tr></table></figure>
-
-<p>18.一些 <code>JSP</code> 操作的名称？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：jsp:include， jsp:useBean， jsp:setProperty， jsp:getProperty， jsp:forward， jsp:plugin，jsp:element， jsp:attribute， jsp:body， jsp:text</span><br></pre></td></tr></table></figure>
-
-<p>19.什么是 <code>JSP</code> 字面值？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">答：字面值是一些值，例如一个数字或者一个文本字符串，编写程序代码的一部分。JSP 表达式语言定义以下字面值：</span><br><span class="line">    Boolean：真和假</span><br><span class="line">    Integer：同 Java</span><br><span class="line">    Floating point：同 Java</span><br><span class="line">    String：使用单引号和双引号；&quot; is escaped as \&quot;, &apos; is escaped as \&apos;, and \ is escaped as \</span><br><span class="line">    Null:空</span><br></pre></td></tr></table></figure>
-
-<p>20.什么是页面指令？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：**页面**指令用于为属于当前 JSP 页面的容器提供指示。你可能会在你的 JSP 页面的任何位置编写页面指令。</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/06/JSP14/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP13" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/03/JSP13/">JSP</a>
+    <h1 class="article-title" itemprop="name">
+      JSP
     </h1>
   
 
@@ -305,6 +190,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -312,16 +218,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/03/JSP13/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/03/JSP13/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/12/06/JSP14/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JSP
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/26/JSP11/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JSP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -341,867 +315,14 @@
 
 
 
-
-  
-    <article id="post-JSP11" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/JSP11/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/JSP11/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JSP中的EL表达式"><a href="#JSP中的EL表达式" class="headerlink" title="JSP中的EL表达式"></a>JSP中的EL表达式</h2><h3 id="EL表达式-用于替代jsp页面中的Java代码"><a href="#EL表达式-用于替代jsp页面中的Java代码" class="headerlink" title="EL表达式:用于替代jsp页面中的Java代码"></a>EL表达式:用于替代jsp页面中的Java代码<br></h3><h5 id="优势"><a href="#优势" class="headerlink" title="优势:"></a>优势:</h5><pre><code>不需要像java一样,
-进行强制类型转换,
-不需要处理null在EL中直接显示为空白
-简洁
-不需要&lt;%%&gt;表签,直接嵌入到jsp代码中    
-防止代码参杂</code></pre><h5 id="用法"><a href="#用法" class="headerlink" title="用法:"></a>用法:</h5><pre><code>${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}
-    &lt;不能包括特殊字符如.&gt;
-      or    
-${域对象[&apos;域对象中的属性&apos;][&apos;属性&apos;][&apos;属性&apos;].,,,,,,,,,,,,,,,,,,,,,,,,,}
-    &lt;能包括特殊字符如.&gt;&lt;br/&gt;
-    &lt;可获取变量值 ,这时[]中不加引号&apos;&apos;    加&apos;&apos;认为是常量&gt;
-    &lt;可获取数组元素  stu[1],stu[2].......&gt;
-
- 获取Map属性
-${域对象.域对象中的map对象.属性名}
-    or
-${域对象.域对象中的map对象[&apos;属性名&apos;]}
-
-可直接在EL中计算:
-    gt          ne            eq           le        ge      lt
-    ${3 &gt; 2},${3 != 2},${3 == 2},${3 &lt;= 2},${3 &gt;= 2},${3 &lt; 2},
-
-    or          and         not
-    ${3 || 2},${3 &amp;&amp; 2}${3 ! 2},
-
-Empty运算符:用于判断一个值是否存在   存在有值返回false  / 为null或其他情况或不存在反回true 
-    ${empty 域对象.域对象中的map对象.属性名}</code></pre><h5 id="EL表达式的隐式对象"><a href="#EL表达式的隐式对象" class="headerlink" title="EL表达式的隐式对象:"></a>EL表达式的隐式对象:</h5><pre><code>a.作用域访问对象(EL  域对象)*
-pageScope    requestScope    sessionScope    applicationScope
-若用El取值时不指定域对象,则根据从    小范围   到   大范围    的顺序   依次取值
-如: ${requestScope.域对象中的map对象[&apos;属性名&apos;]}
-
-b.参数访问对象
-用于获取表单数据${param}                ${oaramValues}
-   对应于 repuest.getParameter()        repuest.getParameterValues()
-        单个表单数据            表单数组数据&lt;复选框..&gt;
-如: ${param.数据名}      ${param.数组数据名}    
-
-也可获取超链接中传的值,地址栏中的值
-
-c.JSP隐式对象
-    pageContext
-通过此pageContext对象可拿到JSP中任意常见隐式对象
-如:  ${pageContext.session.下一个方法或对象...}    &lt;不是.getSession()&gt;</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/JSP11/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/JSP12/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/JSP12/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JSP中的JSTL表达式"><a href="#JSP中的JSTL表达式" class="headerlink" title="JSP中的JSTL表达式"></a>JSP中的JSTL表达式</h2><p>JSTL比EL更强大:</p>
-<pre><code>使用前提:
-       加入:    jstl.jar包     &lt;搜索时后加mvn&gt;
-            standard.jar包        &lt;搜索时后加mvn&gt;
-引用声明:
-       &lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot; %&gt;</code></pre><blockquote>
-<p>prefix=”c” 时值c时引用时为&lt;c:set……..&gt;<br><br>prefix=”x” 时值x时引用时为&lt;x:set……..&gt;</p>
-</blockquote>
-<p>核心标签库:</p>
-<pre><code>通用标签库:
-a.&lt;c:set/&gt;设置/赋值
-  &lt;c:set/&gt;给  某个变量   在    某个作用域中   赋值
-  如: &lt;c:set var=&quot;名&quot;    value=&quot;值&quot;         scope=&quot;requset作用域或其他作用域&quot; /&gt;
-
-  &lt;c:set/&gt;给  某个对象的属性     赋值     不需要指定作用域(因为已指定)     
-  如: &lt;c:set target=&quot;${requestScope.对象名}&quot;      property=&quot;对象的属性&quot;    value=&quot;值&quot;  /&gt;
-
-  &lt;c:set/&gt;给  某个Map对象的属性    赋值    不需要指定作用域(因为已指定)   
-  如: &lt;c:set target=&quot;${requestScope.map对象名}&quot;      property=&quot;map对象的属性&quot;    value=&quot;值&quot;  /&gt;
-
-  &lt;c:set/&gt;给  不存在变量    赋值   即先创建变量再赋值    不需要指定作用域(因为已指定) 
-  如: &lt;c:set var=&quot;名&quot;    value=&quot;值&quot;         scope=&quot;requset作用域或其他作用域&quot; /&gt;
-         但 不能     给  不存在对象的属性    赋值
-
-b.&lt;c:out  /&gt;显示输出
-  &lt;c:out value=&quot;${requestScope.对象名.属性}&quot;   default=&quot;若取值不存在或为null则   默认值为此&quot; /&gt;
-  显示连接代码但不跳转
-  &lt;c:out value=&quot;&lt;a href=&quot;https://www.baidu.com&quot;&gt;百度&lt;/a&gt;&quot;   escapeXml=&quot;true显示代码/false转换为a标签连接不显示代码&quot; /&gt;
-
-c.删除变量值
-  &lt;c:remove  var=&quot;名&quot; scope=&quot;requset作用域或其他作用域&quot; /&gt;
-
-
-条件标签库:
-    ###需要注意的是-&gt;[test=&quot;${判断内容如:2&gt;5}\/此处的空格会严重影响判断结果 因为会将判断结果和空格连接为字符串&quot;]
- a.
- 单重选择:
- &lt;c:if test=&quot;${判断内容如:2&gt;5}&quot;   var=&quot;result存放判断结果&quot;   scope=&quot;requset作用域或其他作用域&quot;  /&gt;
-   显示内容或输出
-   ${requestScope.result}
- &lt;/c:if&gt;
- b.
- 多重选择:
- &lt;c:choose&gt;
-    &lt;c:when test=&quot;${判断内容如:2&gt;5}&quot;&gt;显示值1&lt;/c:when&gt;
-    &lt;c:when test=&quot;${判断内容如:4&gt;5}&quot;&gt;显示值2&lt;/c:when&gt;
-    &lt;c:when test=&quot;${判断内容如:9&gt;5}&quot;&gt;显示值3&lt;/c:when&gt;
-    &lt;c:other&gt;默认显示值4&lt;c:other&gt;
- &lt;/c:choose&gt;
-
-
-迭代标签库:
-    ###需要注意的是-&gt;test=&quot;${判断内容如:2&gt;5}\/此处的空格会严重影响判断结果 因为会将判断结果和空格连接为字符串&quot;
- a.普通循环
- &lt;c:forEach  begin=&quot;开始值&quot;   end=&quot;结束值可取到此值即为&lt;=&quot;    step=&quot;变量变化如+/-1&quot; varStatus=&quot;status存放此次循环信息&quot; &gt;
-    ${status.index可得到此次循环的  下标(begin变化前的值)}
- &lt;/c:forEach&gt;
-b.遍历集合,数组等
- 遍历数组
- &lt;c:forEach   var=&quot;每个变量的名如name&quot;  items=&quot;${requestScope.数组名}&quot; &gt;
-    ${name}  //即遍历数组中的name值
- &lt;/c:forEach&gt;
- 遍历集合
- &lt;c:forEach   var=&quot;每个对象的名如stu&quot;  items=&quot;${requestScope.集合名}&quot; &gt;
-    ${stu.name}  //即遍历集合中的name值
-    ${stu.son}  //即遍历集合中的name值
- &lt;/c:forEach&gt;</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/JSP12/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/JSP10/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/JSP10/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MySQL分页sql语句"><a href="#MySQL分页sql语句" class="headerlink" title="MySQL分页sql语句"></a>MySQL分页sql语句</h2><p>要实现分页要严格依赖SQL语句:<br>    前提:知道    那一页的数据从  何处开始   从  何处结束  </p>
-<pre><code>   使用sql关键字  limit n,x;
-    *(第n行开始  取 x条数据)*
-
-第n页            开始行号            结束行号    
-1            0            9
-2            10            19
-3            20            29
-.............................
-n            (n-1)*10            n*10-1
-
-转化为sql语句为:
-    select * from user limit 0,10;
-    select * from user limit 10,10;
-    select * from user limit 20,10;
-    .................................
-    select * from user limit (n-1)*10,10;
-
-即:   select * from user limit  &lt;页数*页面大小(每页行数)&gt;,&lt;页面大小(每页行数)&gt;;</code></pre><p>在dao及servle中使用:</p>
-<pre><code>需要数据:&lt;顺序&gt;
-    1.数据总量                &lt;查询数据库得知,select count(*)...;用rs保存&gt;
-    2.页面大小(每页行数)                &lt;自定义&gt;
-    3.总页数                    &lt;程序计算&gt;
-    总页数= 100/20=数据总数/页面大小=5页
-    总页数= 103/20=数据总数/页面大小=5.6--&gt;5+1页
-    总页数=数据总数%页面大小==0? 数据总数/页面大小:数据总数/页面大小+1
-    判断是否除尽根据是否除尽,执行不同操作
-
-    4.当前页码                &lt;自定义&gt;
-    由jsp页面传入
-
-    5.当前页所显示的数据对象集合(实体类集合)    &lt;查询得知&gt;</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/JSP10/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/23/JSP9/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/23/JSP9/" class="archive-article-date">
-  	<time datetime="2019-11-23T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="通过浏览器对象response传值的使用-创建-赋值及注销"><a href="#通过浏览器对象response传值的使用-创建-赋值及注销" class="headerlink" title="通过浏览器对象response传值的使用,创建\赋值及注销"></a>通过浏览器对象response传值的使用,创建\赋值及注销</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">//登录成功</span><br><span class="line">response.sendRedirect(&quot;/success.jsp&quot;);</span><br><span class="line"></span><br><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;欢迎页面&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;%</span><br><span class="line">//从Request获取id、pwd、name的值</span><br><span class="line">String id= request.getParameter(&quot;id&quot;);</span><br><span class="line">String pwd= request.getParameter(&quot;pwd&quot;);</span><br><span class="line">String name= request.getParamete(&quot;name&quot;);</span><br><span class="line">//获取Session对象</span><br><span class="line">String path = request.getContextPath();</span><br><span class="line">HttpSession session=request.getSession();</span><br><span class="line">//向Session对象内放属性</span><br><span class="line">session.setAttribute(&quot;id&quot;, id);</span><br><span class="line">session.setAttribute(&quot;pwd&quot;, pwd);</span><br><span class="line">session.setAttribute(&quot;name&quot;, name);</span><br><span class="line">//页面输出</span><br><span class="line">out.println(&quot;&lt;span&gt;欢迎&quot;+name+&quot;登录&lt;/span&gt;&quot;);  </span><br><span class="line">//注销链接</span><br><span class="line">&lt;a href=&quot;out.jsp&quot;&gt;注销&lt;/a&gt;</span><br><span class="line">%&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">注销页面(out.jsp)如下：</span><br><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;%</span><br><span class="line">//获取Session对象</span><br><span class="line">String path = request.getContextPath();</span><br><span class="line">HttpSession session=request.getSession();</span><br><span class="line">//清空Session中的登录信息相关属性</span><br><span class="line">	session.removeAttribute(&quot;id&quot;);</span><br><span class="line">	session.removeAttribute(&quot;pwd&quot;);</span><br><span class="line">   	session.removeAttribute(&quot;name&quot;);</span><br><span class="line">//上下文路径</span><br><span class="line">String path = request.getContextPath();</span><br><span class="line">//重定向到首页(未登录状态)</span><br><span class="line">response.sendRedirect(path+&quot;/index.jsp&quot;);</span><br><span class="line">%&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/23/JSP9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/JSP8/">JSP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/20/JSP8/" class="archive-article-date">
-  	<time datetime="2019-11-20T10:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JSP登录"><a href="#JSP登录" class="headerlink" title="JSP登录"></a>JSP登录</h1><h5 id="在jsp中通过action-”-lt-path-gt-ServletOne”提交到servlet-由servlet进行判定-使用request-getParameter-“username”-方法获取页面值-成功后通过request-getRequestDispatcher-“login-jsp”-forward-request-response-决定跳转方向"><a href="#在jsp中通过action-”-lt-path-gt-ServletOne”提交到servlet-由servlet进行判定-使用request-getParameter-“username”-方法获取页面值-成功后通过request-getRequestDispatcher-“login-jsp”-forward-request-response-决定跳转方向" class="headerlink" title="在jsp中通过action=”&lt;%=path%&gt;/ServletOne”提交到servlet,由servlet进行判定(使用request.getParameter(“username”);方法获取页面值),成功后通过request.getRequestDispatcher(“login.jsp”).forward(request, response);决定跳转方向"></a>在jsp中通过action=”&lt;%=path%&gt;/ServletOne”提交到servlet,由servlet进行判定(使用request.getParameter(“username”);方法获取页面值),成功后通过request.getRequestDispatcher(“login.jsp”).forward(request, response);决定跳转方向</h5><h2 id="1-Servlet方式"><a href="#1-Servlet方式" class="headerlink" title="1.Servlet方式"></a>1.Servlet方式</h2><p>整体流程：登录页面提交(get/post方式)form表单数据到一个Servlet，在其内进行判定是否登录。<br></p>
-<blockquote>
-<p>(1)Servlet中的doPost()方法：</p>
-<blockquote>
-<p>A.用<code>Request.getParameter(&quot;[input标签的name属性名]&quot;)</code>方法获取登录页面提交过来的表单数据。<br><br>B.通过sql的JDBC的Jar包导入，进行数据库连接(连接代码见以往的连接代码)，用sql(类似于<code>select * from user where id =&#39;&#39;, pwd=&#39;&#39;;)</code>查询语句。<br><br>C.比对判定以上两项的数据，页面跳转(“转发”和”重定向”两种方式取其一)。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>(2)跳转到的页面：登录成功页面/不跳转</p>
-</blockquote>
-<h2 id="2-表单提交数据到JSP的方式"><a href="#2-表单提交数据到JSP的方式" class="headerlink" title="2.表单提交数据到JSP的方式"></a>2.表单提交数据到JSP的方式</h2><p>整体流程：登录页面提交form表单(get或post方式到action指定的位置)的数据到一个JSP，在其内进行判定是否登录。</p>
-<blockquote>
-<p>(1)JSP中的<code>&lt;% %&gt;</code>脚本内容：</p>
-<blockquote>
-<p>A.用<code>Request.getParameter(&quot;[input标签的name属性名]&quot;)</code>方法获取登录页面提交过来的表单数据。<br><br>B.通过sql的JDBC的Jar包导入，进行数据库连接(连接代码见以往的连接代码)，用sql(类似于<code>select * from user where id =&#39;&#39;, pwd=&#39;&#39;;</code>)查询语句。<br><br>C.比对判定以上两项的数据，页面跳转(“转发”和”重定向”两种方式取其一)。<br></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>(2)跳转到的页面：</p>
-<blockquote>
-<p>登录成功页面(在Session中保存用户信息)/重定向到登录JSP页面，为地址栏添加一个属性<code>(response.sendRedirect(&quot;index.jsp?info=&quot;登录失败&quot;))</code></p>
-</blockquote>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/JSP8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/15/JSP7/">JDBC通用连接、增删改查类</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/15/JSP7/" class="archive-article-date">
-  	<time datetime="2019-11-15T11:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JDBC通用连接、增删改查类"><a href="#JDBC通用连接、增删改查类" class="headerlink" title="JDBC通用连接、增删改查类"></a>JDBC通用连接、增删改查类</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line">package com.daqc.demo.dao;</span><br><span class="line"></span><br><span class="line">import java.sql.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 	&gt;&gt;&gt;通用的  数据库  操作 方法 增删改查</span><br><span class="line"> * 	引用范例:</span><br><span class="line"> *	public static void main(String[] args) throws SQLException &#123;</span><br><span class="line"> *		ResultSet rs = executeQuery(&quot;SELECT * FROM user;&quot;, null);</span><br><span class="line"> *		while (rs.next()) &#123;</span><br><span class="line"> *			System.out.println(rs.getObject(1));</span><br><span class="line"> *		&#125;</span><br><span class="line"> *		Object [] s = &#123;1234560&#125;;</span><br><span class="line"> *		boolean flag = executeUpdate(&quot;UPDATE `user` SET password = ?;&quot;,s);</span><br><span class="line"> *		System.out.println(flag);</span><br><span class="line"> *	&#125;</span><br><span class="line"> */</span><br><span class="line">public class DBUtil &#123;</span><br><span class="line">	static final String JDBC_DRIVER = &quot;com.mysql.jdbc.Driver&quot;;  </span><br><span class="line">	static final String URL = &quot;jdbc:mysql://localhost:3306/his&quot;;</span><br><span class="line">	static final String USERNAME = &quot;root&quot;;</span><br><span class="line">	static final String PASSWORD = &quot;root&quot;;</span><br><span class="line">	</span><br><span class="line">	public static Connection connection = null;</span><br><span class="line">	public static PreparedStatement pstmt = null;</span><br><span class="line">	public static ResultSet rs = null;</span><br><span class="line">	/**</span><br><span class="line">	 *	&gt;&gt;&gt;获取连接  返回DriverManager.getConnection(URL,USERNAME,PASSWORD);</span><br><span class="line">	 */</span><br><span class="line">	public static Connection getConnection() throws SQLException, ClassNotFoundException &#123;</span><br><span class="line">		Class.forName(JDBC_DRIVER);</span><br><span class="line">		return DriverManager.getConnection(URL,USERNAME,PASSWORD);</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 *	&gt;&gt;&gt;获取单例连接  返回DriverManager.getConnection(URL,USERNAME,PASSWORD);</span><br><span class="line">	 */</span><br><span class="line">	public static Connection getOneConnection() throws SQLException, ClassNotFoundException &#123;</span><br><span class="line">		if (DBUtil.connection == null) &#123;</span><br><span class="line">			return getConnection();</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			return DBUtil.connection;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 	&gt;&gt;&gt;给 String sql 语句中的 ? 赋值</span><br><span class="line">	 */</span><br><span class="line">	public static PreparedStatement createPreParedStatement(String sql,Object[] params) throws SQLException, ClassNotFoundException &#123;</span><br><span class="line">		connection = getOneConnection();</span><br><span class="line">		pstmt = connection.prepareStatement(sql);</span><br><span class="line">		if (params != null) &#123;</span><br><span class="line">			for (int i = 0; i &lt; params.length; i++) &#123;</span><br><span class="line">				pstmt.setObject((i+1),params[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return pstmt;</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 	(((通用的增删改)))</span><br><span class="line">	 * 	&gt;&gt;&gt;用法：String sql = &quot;&quot;;  Object[] params = &#123;int id,String name.....&#125;;</span><br><span class="line">	 * 	&gt;&gt;&gt;返回：   boolean值 t/f </span><br><span class="line">	 * 	&gt;&gt;&gt;接收：  创建boolean flag = null; </span><br><span class="line">	 * 			使 flag = executeUpdate(String sql,Object[] params);</span><br><span class="line">	 * 	&gt;&gt;&gt;已经自动关闭 if (pstmt!=null) pstmt.close();</span><br><span class="line">	 *  		if (rs!=null) rs.close();</span><br><span class="line">	 *		   if (DBUtil.connection!=null) DBUtil.connection.close();</span><br><span class="line">	 */</span><br><span class="line">	public static boolean executeUpdate(String sql,Object[] params) &#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			pstmt = createPreParedStatement(sql, params);</span><br><span class="line">			int count = pstmt.executeUpdate();</span><br><span class="line">			if (count &gt; 0) &#123;</span><br><span class="line">				return true;</span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				return false;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return false;</span><br><span class="line">		&#125; catch (SQLException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return false;</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return false;</span><br><span class="line">		&#125; finally &#123;</span><br><span class="line">			closeAll(connection, pstmt, rs);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	/**</span><br><span class="line">	 * 	(((通用的查)))                                                </span><br><span class="line">	 * 	&gt;&gt;&gt;用法：String sql = &quot;select ? from `user` where id =?&quot;;</span><br><span class="line">	 * 		?对应值Object[] params = &#123;String name,int id.....&#125;;可为空null</span><br><span class="line">	 * 	&gt;&gt;&gt;返回:  PreparedStatement pstmt = null;类型结果集rs</span><br><span class="line">	 * 	&gt;&gt;&gt;接收： 创建  PreparedStatement pstmt = null;</span><br><span class="line">	 * 		使pstmt = executeQuery(String sql,Object[] params)</span><br><span class="line">	 *	&gt;&gt;&gt;需要调用关闭  DBUtil.closeAll(DBUtil.connection, pstmt, rs);</span><br><span class="line">	 *			</span><br><span class="line">	 */</span><br><span class="line">	public static ResultSet executeQuery(String sql,Object[] params) &#123;</span><br><span class="line">		try &#123;</span><br><span class="line">			pstmt = createPreParedStatement( sql,params);</span><br><span class="line">			rs = pstmt.executeQuery();</span><br><span class="line">			return rs;</span><br><span class="line">		&#125; catch (ClassNotFoundException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return null;</span><br><span class="line">		&#125; catch (SQLException e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return null;</span><br><span class="line">		&#125; catch (Exception e) &#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			return null;</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">/**</span><br><span class="line"> * 	(((关闭数据库连接)))</span><br><span class="line"> * 			try &#123;</span><br><span class="line"> *				if (pstmt!=null) pstmt.close();</span><br><span class="line"> *				if (rs!=null) rs.close();</span><br><span class="line"> *				if (connection!=null) connection.close();</span><br><span class="line"> *			&#125; catch (SQLException e) &#123;</span><br><span class="line"> *				e.printStackTrace();</span><br><span class="line"> *			&#125;</span><br><span class="line"> * 		</span><br><span class="line"> */</span><br><span class="line">	public static void closeAll(Connection connection,Statement pstmt,ResultSet rs) &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				if (pstmt!=null) pstmt.close();</span><br><span class="line">				if (rs!=null) rs.close();</span><br><span class="line">				if (connection!=null) connection.close();</span><br><span class="line">			&#125; catch (SQLException e) &#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/15/JSP7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/JSP6/">MySQL内外连接解析</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/13/JSP6/" class="archive-article-date">
-  	<time datetime="2019-11-13T06:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="内连接，外连接，交叉连接-和连接方法-如下-："><a href="#内连接，外连接，交叉连接-和连接方法-如下-：" class="headerlink" title="内连接，外连接，交叉连接)和连接方法(如下)："></a>内连接，外连接，交叉连接)和连接方法(如下)：</h1><blockquote>
-<p>A）内连接：join，inner join</p>
-</blockquote>
-<blockquote>
-<p>B）外连接：left join，left outer join，right join，right outer join，union</p>
-</blockquote>
-<blockquote>
-<p>C）交叉连接：cross join</p>
-</blockquote>
-<p>案例表：<br>t_users:</p>
-<p>t_department:</p>
-<h2 id="第一种：内连接-inner-join"><a href="#第一种：内连接-inner-join" class="headerlink" title="第一种：内连接 inner join"></a>第一种：内连接 inner join</h2><p>内连接INNER JOIN是最常用的连接操作。从数学的角度讲就是求两个表的交集，从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录。<br>有INNER JOIN，WHERE（等值连接），STRAIGHT_JOIN,JOIN(省略INNER)四种写法。<br><code>select d.id, d.department, t.name from t_users t</code><br><code>inner join t_department d on d.id = t.department_id</code></p>
-<h4 id="结果说明；只去表A表和B表共同有的on-条件部分数据；"><a href="#结果说明；只去表A表和B表共同有的on-条件部分数据；" class="headerlink" title="结果说明；只去表A表和B表共同有的on 条件部分数据；"></a>结果说明；只去表A表和B表共同有的on 条件部分数据；</h4><h2 id="第二种：外连接-left-join，left-outer-join-，right-join，-right-outer-join，-union"><a href="#第二种：外连接-left-join，left-outer-join-，right-join，-right-outer-join，-union" class="headerlink" title="第二种：外连接 left join，left outer join ，right join， right outer join， union"></a>第二种：外连接 left join，left outer join ，right join， right outer join， union</h2><h2 id="1）左连接LEFT-JOIN的含义就是求两个表A表和B表的交集外加左表剩下的数据。依旧从笛卡尔积的角度讲，就是先从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表A表中剩余的记录"><a href="#1）左连接LEFT-JOIN的含义就是求两个表A表和B表的交集外加左表剩下的数据。依旧从笛卡尔积的角度讲，就是先从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表A表中剩余的记录" class="headerlink" title="1）左连接LEFT JOIN的含义就是求两个表A表和B表的交集外加左表剩下的数据。依旧从笛卡尔积的角度讲，就是先从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表A表中剩余的记录"></a>1）左连接LEFT JOIN的含义就是求两个表A表和B表的交集外加左表剩下的数据。依旧从笛卡尔积的角度讲，就是先从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表A表中剩余的记录</h2><p><code>where b.id is null</code></p>
-<p><code>select   t.name, t.department_id, d.department from t_users tleft join t_department d on d.id = t.department_id</code></p>
-<h3 id="2）右连接-RIGHT-JOIN同理右连接RIGHT-JOIN就是求两个表A和B表的交集外加右表B剩下的数据。再次从笛卡尔积的角度描述，右连接就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上右表中剩余的记录（"><a href="#2）右连接-RIGHT-JOIN同理右连接RIGHT-JOIN就是求两个表A和B表的交集外加右表B剩下的数据。再次从笛卡尔积的角度描述，右连接就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上右表中剩余的记录（" class="headerlink" title="2）右连接 RIGHT JOIN同理右连接RIGHT JOIN就是求两个表A和B表的交集外加右表B剩下的数据。再次从笛卡尔积的角度描述，右连接就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上右表中剩余的记录（"></a>2）右连接 RIGHT JOIN同理右连接RIGHT JOIN就是求两个表A和B表的交集外加右表B剩下的数据。再次从笛卡尔积的角度描述，右连接就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上右表中剩余的记录（</h3><p> where a.id is null</p>
-<p>select   t.id userid,t.name, t.department_id, d.department from t_users right join t_department d on d.id = t.department_id</p>
-<h3 id="3）外连接-FULL-OUTER-JOIN外连接就是求两个表A和B集合的并集。从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表中剩余的记录，最后加上右表中剩余的记录。另外MySQL不支持OUTER-JOIN，但是我们可以对左连接和右连接的结果做-UNION-操作来实现。"><a href="#3）外连接-FULL-OUTER-JOIN外连接就是求两个表A和B集合的并集。从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表中剩余的记录，最后加上右表中剩余的记录。另外MySQL不支持OUTER-JOIN，但是我们可以对左连接和右连接的结果做-UNION-操作来实现。" class="headerlink" title="3）外连接 FULL OUTER JOIN外连接就是求两个表A和B集合的并集。从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表中剩余的记录，最后加上右表中剩余的记录。另外MySQL不支持OUTER JOIN，但是我们可以对左连接和右连接的结果做 UNION 操作来实现。"></a>3）外连接 FULL OUTER JOIN外连接就是求两个表A和B集合的并集。从笛卡尔积的角度讲就是从笛卡尔积中挑出ON子句条件成立的记录，然后加上左表中剩余的记录，最后加上右表中剩余的记录。另外MySQL不支持OUTER JOIN，但是我们可以对左连接和右连接的结果做 UNION 操作来实现。</h3><h5 id="情景一：A和B的并集"><a href="#情景一：A和B的并集" class="headerlink" title="情景一：A和B的并集"></a>情景一：A和B的并集</h5><p><code>select   t.id userid,t.name, t.department_id, d.department from t_users tleft join t_department d on d.id = t.department_idUNIONselect   t.id userid,t.name, t.department_id, d.department from t_users tright join t_department d on d.id = t.department_id</code></p>
-<h5 id="情景二：A和B中不满足某个条件的记录"><a href="#情景二：A和B中不满足某个条件的记录" class="headerlink" title="情景二：A和B中不满足某个条件的记录"></a>情景二：A和B中不满足某个条件的记录</h5><p>如：即不在A表user里面；也不在B表department里面的数据；条件 is null</p>
-<p><code>select   t.id userid,t.name, t.department_id, d.department from t_users tleft join t_department d on d.id = t.department_idwhere d.id is nullUNIONselect   t.id userid,t.name, t.department_id, d.department from t_users tright join t_department d on d.id = t.department_idwhere t.department_id is null</code></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/13/JSP6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JSP5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/08/JSP5/">MySQL数据库增删改查SQL语句</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/08/JSP5/" class="archive-article-date">
-  	<time datetime="2019-11-08T05:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h1><blockquote>
-<p><code>show databases</code>; </p>
-</blockquote>
-<h1 id="使用数据库"><a href="#使用数据库" class="headerlink" title="使用数据库"></a>使用数据库</h1><blockquote>
-<p><code>use 数据库名</code>; </p>
-</blockquote>
-<h1 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h1><blockquote>
-<p><code>CREATE DATABASE 数据库名</code>; </p>
-</blockquote>
-<h1 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h1><blockquote>
-<p><code>DROP DATABASE 数据库名</code>; </p>
-</blockquote>
-<h1 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h1><blockquote>
-<p><code>create table 表名(    列名1 类型(长度) [约束],    列名2 类型(长度) [约束],    ……);</code> </p>
-</blockquote>
-<h1 id="长度区别"><a href="#长度区别" class="headerlink" title="长度区别"></a>长度区别</h1><p>int类型带长度：不影响存取值，即使设定的值超出了长度的范畴，也能存，如果没有达到设定的长度，则使用 空格自动填充到设定的长度 char类型：不可变字符，设定的长度就是规定当前字段能存的数据的最大长度，若 超出长度，则会报错，若没有达到长度，使用空格填充到设定的长度 varchar：可变字符，设定的长度同样是规 定当前字段能存的数据的最大长度，若超出长度，则会报错，若没有达到长度，不会使用空格填充，实际多长 就是多长</p>
-<h1 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h1><blockquote>
-<p>DROP TABLE 表名; </p>
-</blockquote>
-<h1 id="表约束"><a href="#表约束" class="headerlink" title="表约束"></a>表约束</h1><ul>
-<li>1.非空约束 NOT NULL </li>
-<li>2.默认值约束 DEFAULT ‘男’ </li>
-<li>3.唯一约束 UNIQUE4.主键约束 PRIMARY KEY</li>
-</ul>
-<h1 id="查看表结构"><a href="#查看表结构" class="headerlink" title="查看表结构"></a>查看表结构</h1><p>DESC 表名</p>
-<h1 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h1><h1 id="修改列名"><a href="#修改列名" class="headerlink" title="修改列名"></a>修改列名</h1><blockquote>
-<p><code>Alter table 表名  change  列名  新列名 类型;</code></p>
-</blockquote>
-<h1 id="修改列类型"><a href="#修改列类型" class="headerlink" title="修改列类型"></a>修改列类型</h1><blockquote>
-<p><code>Alter table 表名  change 列名  列名  新类型;</code></p>
-</blockquote>
-<h1 id="修改列类型-1"><a href="#修改列类型-1" class="headerlink" title="修改列类型"></a>修改列类型</h1><blockquote>
-<p><code>Alter table 表名  modify  列名  新类型;</code></p>
-</blockquote>
-<p>===========================数据查询-单表=============================</p>
-<h1 id="查询表中全部信息"><a href="#查询表中全部信息" class="headerlink" title="查询表中全部信息"></a>查询表中全部信息</h1><blockquote>
-<p><code>select * from 表名;</code></p>
-</blockquote>
-<h1 id="查询表中指定列的信息"><a href="#查询表中指定列的信息" class="headerlink" title="查询表中指定列的信息"></a>查询表中指定列的信息</h1><blockquote>
-<p><code>select 列1,列2 from 表名;</code></p>
-</blockquote>
-<p>语句的执行顺序：<code>from—&gt;select</code></p>
-<h1 id="数据去重"><a href="#数据去重" class="headerlink" title="数据去重"></a>数据去重</h1><blockquote>
-<p>select distinct 列…. From 表名; </p>
-</blockquote>
-<h1 id="拼接结果"><a href="#拼接结果" class="headerlink" title="拼接结果"></a>拼接结果</h1><blockquote>
-<p><code>select concat(列1,列2) from 表名;</code></p>
-</blockquote>
-<h1 id="运算符优先级："><a href="#运算符优先级：" class="headerlink" title="运算符优先级："></a>运算符优先级：</h1><ul>
-<li>1.乘法和除法的优先级高于加法和减法 2.同级运算的顺序是从左到右 3.表达式中使用”括号”可强行改变优先级 的运算顺序</li>
-</ul>
-<blockquote>
-<p><code>select 列1[+-*/]列2 from 表名;</code></p>
-</blockquote>
-<h1 id="设置别名-注意：关键字as可以省略"><a href="#设置别名-注意：关键字as可以省略" class="headerlink" title="设置别名(注意：关键字as可以省略)"></a>设置别名(注意：关键字as可以省略)</h1><blockquote>
-<p><code>select 列 as 别名 from 表名;   select 列 别名 from 表名;</code>  </p>
-</blockquote>
-<p>语句的执行顺序：from—&gt;select</p>
-<h1 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h1><blockquote>
-<p><code>select 列… from 表名 where 条件;</code> </p>
-</blockquote>
-<p>条件中比较运算符：( 等于:= 大于:&gt; 大于等于:&gt;= 小于:&lt; 小于等于:&lt;= 不等于:!= 或 &lt;&gt; )</p>
-<blockquote>
-<p><code>where 列  比较运算符  值;</code></p>
-</blockquote>
-<p>注意:字符串、日期需使用单引号括起来 语句的执行顺序：from—&gt;where—&gt;select</p>
-<h1 id="逻辑运算符-并且-and-或-amp-amp-或-or-非-not-或"><a href="#逻辑运算符-并且-and-或-amp-amp-或-or-非-not-或" class="headerlink" title="逻辑运算符( 并且:and 或 &amp;&amp; 或:or 非:not 或 ! )"></a>逻辑运算符( 并且:and 或 &amp;&amp; 或:or 非:not 或 ! )</h1><blockquote>
-<p><code>where 条件1  逻辑运算符  条件2;   where not 条件;</code></p>
-</blockquote>
-<h1 id="范围查询"><a href="#范围查询" class="headerlink" title="范围查询"></a>范围查询</h1><blockquote>
-<p><code>where 列 between 条件1  and 条件2;</code>  </p>
-</blockquote>
-<p>//列在这个区间的值where 列 not between 条件1 and 条件2; </p>
-<p>//不在这个区间where !( 列 between 条件1 and 条件2 );</p>
-<p> //同样表示不在这个区间</p>
-<h1 id="集合查询-判断列的值是否在指定的集合中"><a href="#集合查询-判断列的值是否在指定的集合中" class="headerlink" title="集合查询( 判断列的值是否在指定的集合中 )"></a>集合查询( 判断列的值是否在指定的集合中 )</h1><blockquote>
-<p><code>where 列 in(值1,值2);</code></p>
-</blockquote>
-<p>//列中的数据是in后的值里面的where 列 not in(值1,值2); //不是in中指定值的数据<br>NULL值查询( 注意：列中值为null不能使用=去查询 )</p>
-<blockquote>
-<p><code>where 列 is null;</code>  </p>
-</blockquote>
-<p>//查询列中值为null的数据</p>
-<h1 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h1><p>%：表示0到多个字符，示例：</p>
-<blockquote>
-<p><code>where 列 like &#39;%0&#39;;</code>  </p>
-</blockquote>
-<p>//表示以0结尾where 列 like ‘0%’; </p>
-<p>//表示以0开头where 列 like ‘%0%’; </p>
-<p>//表示数据中包含0</p>
-<p>_：表示一个字符，可多次使用，示例：</p>
-<blockquote>
-<p><code>where 列 like &#39;%0_&#39;;</code></p>
-</blockquote>
-<p>//数据结尾第二位是0</p>
-<h1 id="结果排序-对查询出的结果按照一列或多列进行升序还是降序排列-升序-asc-降序-desc-注意：不能使用中文的别名排序"><a href="#结果排序-对查询出的结果按照一列或多列进行升序还是降序排列-升序-asc-降序-desc-注意：不能使用中文的别名排序" class="headerlink" title="结果排序( 对查询出的结果按照一列或多列进行升序还是降序排列 升序:asc 降序:desc 注意：不能使用中文的别名排序)"></a>结果排序( 对查询出的结果按照一列或多列进行升序还是降序排列 升序:asc 降序:desc 注意：不能使用中文的别名排序)</h1><blockquote>
-<p><code>where 条件 order by 列 [asc/desc]</code></p>
-</blockquote>
-<p>语句的执行顺序：from—&gt;where—&gt;select—&gt;order by</p>
-<h1 id="分页查询-beginIndex-表示从第多少条数据开始-pageSize-表示每页显示的数据条数"><a href="#分页查询-beginIndex-表示从第多少条数据开始-pageSize-表示每页显示的数据条数" class="headerlink" title="分页查询( beginIndex:表示从第多少条数据开始 pageSize:表示每页显示的数据条数 )"></a>分页查询( beginIndex:表示从第多少条数据开始 pageSize:表示每页显示的数据条数 )</h1><blockquote>
-<p><code>where [条件] limit beginIndex,pageSize;</code></p>
-</blockquote>
-<ul>
-<li>ex：每页显示3条数据 第一页: SELECT * FROM 表名 LIMIT 0,3 –0,1,2 第二页: SELECT * FROM 表名 LIMIT 3,3 -3,4,5 第三页: SELECT * FROM 表名 LIMIT 6,3 –6,7,8 第四页: SELECT * FROM 表名 LIMIT 9,3 –9,10,11 …… 第七 页: SELECT * FROM 表名 LIMIT 18,3 –18,19,20</li>
-</ul>
-<p>beginIndex公式：(当前页数-1)*pageSize</p>
-<h1 id="聚集函数-作用于一组数据，并对一组数据返回一个值"><a href="#聚集函数-作用于一组数据，并对一组数据返回一个值" class="headerlink" title="聚集函数( 作用于一组数据，并对一组数据返回一个值 )"></a>聚集函数( 作用于一组数据，并对一组数据返回一个值 )</h1><p>COUNT:统计结果记录数，若统计的是列，列中为Null，那么count将不会计算值</p>
-<p>MAX: 统计计算最大值</p>
-<p>MIN: 统计计算最小值</p>
-<p>SUM: 统计计算求和</p>
-<p>AVG: 统计计算平均值</p>
-<h1 id="分组函数-注意：如果要对分组后的数据进行筛选，那么必须使用having关键字，条件写在having后"><a href="#分组函数-注意：如果要对分组后的数据进行筛选，那么必须使用having关键字，条件写在having后" class="headerlink" title="分组函数( 注意：如果要对分组后的数据进行筛选，那么必须使用having关键字，条件写在having后 )"></a>分组函数( 注意：如果要对分组后的数据进行筛选，那么必须使用having关键字，条件写在having后 )</h1><blockquote>
-<p><code>select 聚集函数 from 表名 where [条件] group by 列 having 分组后的条件</code> </p>
-</blockquote>
-<p>语句的执行顺序：FROM—&gt; WHERE—&gt;group by—-&gt;Having—&gt;SELECT–&gt;ORDER BY</p>
-<p>Where和having的区别：</p>
-<p>Where: 先过滤已有的数据(数据是已经存在的),在进行分组,在聚集计算</p>
-<p>Having:先分组,在对每组进行计算,根据得到结果在过滤(分组把数据算出之后，在过滤)<br>注意：使用having的时候，它是可以使用别名的</p>
-<p>============================数据查询-多表============================</p>
-<h1 id="交叉连接-又名笛卡尔积，使用交叉连接会产生笛卡尔积"><a href="#交叉连接-又名笛卡尔积，使用交叉连接会产生笛卡尔积" class="headerlink" title="交叉连接:又名笛卡尔积，使用交叉连接会产生笛卡尔积"></a>交叉连接:又名笛卡尔积，使用交叉连接会产生笛卡尔积</h1><p>假设集合A={a, b}，集合B={0, 1, 2}，则两个集合的笛卡尔积为{(a, 0), (a, 1), (a, 2), (b, 0), (b, 1), (b, 2)}。</p>
-<blockquote>
-<p><code>select *  from 表1,表2</code></p>
-</blockquote>
-<h1 id="内连接：过滤为空的数据-查询的实际上是两张表数据的交集部分-目的-》解决笛卡尔积现象，正确查询了需要的数据"><a href="#内连接：过滤为空的数据-查询的实际上是两张表数据的交集部分-目的-》解决笛卡尔积现象，正确查询了需要的数据" class="headerlink" title="内连接：过滤为空的数据(查询的实际上是两张表数据的交集部分) 目的 ==》解决笛卡尔积现象，正确查询了需要的数据"></a>内连接：过滤为空的数据(查询的实际上是两张表数据的交集部分) 目的 ==》解决笛卡尔积现象，正确查询了需要的数据</h1><blockquote>
-<p><code>select * from 表1,表2  where 表1.字段=表2.字段;</code> </p>
-</blockquote>
-<p>//隐式内连接,使用where条件消除笛卡尔积</p>
-<blockquote>
-<p><code>select * from 表1 [inner] join 表2 on 表1.字段=表2.字段;</code></p>
-</blockquote>
-<p>//显式内连接,如果是多张表，则一直在join..on后依次添加join..on即可,inner关键字可被省略</p>
-<h1 id="外连接：左外连接、右外连接、全外连接"><a href="#外连接：左外连接、右外连接、全外连接" class="headerlink" title="外连接：左外连接、右外连接、全外连接"></a>外连接：左外连接、右外连接、全外连接</h1><h1 id="左外连接-以左边表为主，返回左边表中所有数据，若右表中无数据，则显示为NULL，请参考实际查询结果来理解"><a href="#左外连接-以左边表为主，返回左边表中所有数据，若右表中无数据，则显示为NULL，请参考实际查询结果来理解" class="headerlink" title="左外连接:以左边表为主，返回左边表中所有数据，若右表中无数据，则显示为NULL，请参考实际查询结果来理解"></a>左外连接:以左边表为主，返回左边表中所有数据，若右表中无数据，则显示为NULL，请参考实际查询结果来理解</h1><blockquote>
-<p><code>select * from 表1 left [outer] join 表2 on 表1.字段=表2.字段;</code></p>
-</blockquote>
-<p>//表1为左表，表2为右表,outer关键字可被省略</p>
-<h1 id="右外连接：以右边表为主，返回右表中所有数据，若左表中无数据，则显示为NULL，结合实际查询结果来理解"><a href="#右外连接：以右边表为主，返回右表中所有数据，若左表中无数据，则显示为NULL，结合实际查询结果来理解" class="headerlink" title="右外连接：以右边表为主，返回右表中所有数据，若左表中无数据，则显示为NULL，结合实际查询结果来理解"></a>右外连接：以右边表为主，返回右表中所有数据，若左表中无数据，则显示为NULL，结合实际查询结果来理解</h1><blockquote>
-<p><code>select * from 表1 right [outer] join 表2 on 表1.字段=表2.字段;</code> </p>
-</blockquote>
-<p>//表1为左表，表2为右表,outer关键字可被省略</p>
-<h1 id="全外连接：返回涉及的多表中的所有数据，MYSQL中不支持该查询，仅限了解自连接：单表当作多表查询，直白的讲就是一张表中-数据含有多种关系，使用多表查询的语法，来查询一张表，查询过程中一定要使用别名"><a href="#全外连接：返回涉及的多表中的所有数据，MYSQL中不支持该查询，仅限了解自连接：单表当作多表查询，直白的讲就是一张表中-数据含有多种关系，使用多表查询的语法，来查询一张表，查询过程中一定要使用别名" class="headerlink" title="全外连接：返回涉及的多表中的所有数据，MYSQL中不支持该查询，仅限了解自连接：单表当作多表查询，直白的讲就是一张表中 数据含有多种关系，使用多表查询的语法，来查询一张表，查询过程中一定要使用别名"></a>全外连接：返回涉及的多表中的所有数据，MYSQL中不支持该查询，仅限了解自连接：单表当作多表查询，直白的讲就是一张表中 数据含有多种关系，使用多表查询的语法，来查询一张表，查询过程中一定要使用别名</h1><h1 id="多用在分类数据、省市县分类数据、权限…"><a href="#多用在分类数据、省市县分类数据、权限…" class="headerlink" title="多用在分类数据、省市县分类数据、权限…"></a>多用在分类数据、省市县分类数据、权限…</h1><blockquote>
-<p><code>select 表1.字段1,表2.字段2 from 表名 as 表1,表名 as 表2 where 表1.字段1=表2.字段2</code>  </p>
-</blockquote>
-<h1 id="子查询：将一个查询结果作为另一个查询的对象，直白的讲就是SQL语句嵌套"><a href="#子查询：将一个查询结果作为另一个查询的对象，直白的讲就是SQL语句嵌套" class="headerlink" title="子查询：将一个查询结果作为另一个查询的对象，直白的讲就是SQL语句嵌套"></a>子查询：将一个查询结果作为另一个查询的对象，直白的讲就是SQL语句嵌套</h1><blockquote>
-<p><code>select * from (select * from 表名) as 别名select * from where 条件</code> </p>
-</blockquote>
-<p>//条件中包含查询语句 注意：1.查询结果的虚拟表必须取别名 2.字段与关键字一样，冲突时，需要给字段名加``,(Esc键下面、1的左边) 3.如果给虚拟结果表中的字段取了别名，则对虚拟结果表查询时，应该用 表别名.虚拟表字段别名</p>
-<p>=============================插入数据=============================</p>
-<blockquote>
-<p><code>insert into 表名(字段1,字段2..) values(值1,值2…);</code></p>
-</blockquote>
-<h1 id="注意：-1-如果插入的表中的主键是自增类型的，可以不用插入值-2-如果主键是非自增-，插入的数据则是填补主-键字段值空余的值-3-如果主键设置了自动递增，会从主键字段最大值开始插入数据"><a href="#注意：-1-如果插入的表中的主键是自增类型的，可以不用插入值-2-如果主键是非自增-，插入的数据则是填补主-键字段值空余的值-3-如果主键设置了自动递增，会从主键字段最大值开始插入数据" class="headerlink" title="注意： 1.如果插入的表中的主键是自增类型的，可以不用插入值 2.如果主键是非自增 ，插入的数据则是填补主 键字段值空余的值 3.如果主键设置了自动递增，会从主键字段最大值开始插入数据"></a>注意： 1.如果插入的表中的主键是自增类型的，可以不用插入值 2.如果主键是非自增 ，插入的数据则是填补主 键字段值空余的值 3.如果主键设置了自动递增，会从主键字段最大值开始插入数据</h1><h1 id="其他插入方式："><a href="#其他插入方式：" class="headerlink" title="其他插入方式："></a>其他插入方式：</h1><blockquote>
-<p><code>insert into 表名(字段1,字段2) values(值1,值2),(值1,值2);</code> </p>
-</blockquote>
-<p>//插入多条数据【MYSQL】<code>insert into 表名 values(值1,值2);</code></p>
-<p>//针对全表所有字段进行插入操作<code>insert into 表名(字段) select 字段 from 表2;</code></p>
-<p>//查询结果插入insert into 表名 <code>select 字段 from 表2; //查询结果，全表插入</code></p>
-<p>=============================修改数据=============================</p>
-<blockquote>
-<p><code>update 表 set 字段=值 where 条件;</code></p>
-</blockquote>
-<p>//带条件修改指定数据，否则修改全表</p>
-<p>=============================删除数据=============================</p>
-<blockquote>
-<p><code>delete from 表 where 条件;</code> </p>
-</blockquote>
-<p>//删除数据带条件指定数据，否则删除全表数据</p>
-<p>=============================数据备份=============================</p>
-<p>在命令行窗口进行，若操作系统版本高，则使用管理员模导出： mysqldump -u账户 -p密码 数据库名称&gt;脚本文件存储地 ex: mysqldump -uroot -proot jdbcdemo&gt; C:/shop_bak.sql 导入： mysql -u账户 -p密码 数据库名称&lt; 脚本文件存储地址 ex: mysql -uroot -proot jdbcdemo&lt; C:/shop_bak.sql 使用可视化导入导出： Navicat工具的导入和导出/Navicat 工具的备份和还原</p>
-<p>=============================数据索引=============================</p>
-<p>索引的作用相当于图书的目录，可以根据目录中的页码快速找到所需的内容。<br>什么列适合建索引？？</p>
-<ul>
-<li>1.表的主键、外键必须有索引； </li>
-<li>2.数据量超过30000的表应该有索引； </li>
-<li>3.经常与其他表进行连接的表，在连接字 段上应该建立索引； </li>
-<li>4.经常出现在Where子句中的字段，特别是大表的字段，应该建立索引； </li>
-<li>5.索引应该建在 选择性高的字段上； </li>
-<li>6.索引应该建在小字段上，对于大的文本字段甚至超长字段，不要建索引；<br>sql语句创建和删除索引：<br>创建索引: CREATE INDEX 索引名称 ON 表名 (列名) 删除索引: 方式一： DROP INDEX 索引名 ON 表名 方式二: ALTER TABLE 表名 DROP INDEX 索引名</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/08/JSP5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1224,8 +345,8 @@ n            (n-1)*10            n*10-1
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
