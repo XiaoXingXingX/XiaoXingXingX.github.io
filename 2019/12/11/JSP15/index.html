@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JSP | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSP中的EL表达式EL表达式:用于替代jsp页面中的Java代码优势:不需要像java一样, 进行强制类型转换, 不需要处理null在EL中直接显示为空白 简洁 不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中     防止代码参杂用法:${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}     &amp;lt;不能包括特殊字符如.&amp;gt;       o">
+  <meta name="description" content="监听器:主要监听:request---------class类实现接口ServletRequestListner session---------class类实现接口HttpSessionListener application---------class类实现接口ServletContextListener  在web容器启动时以运行init  三个对象每个监听器接口有两个方法:分别为init(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSP">
-<meta property="og:url" content="http://yoursite.com/2019/11/26/JSP11/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/12/11/JSP15/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="JSP中的EL表达式EL表达式:用于替代jsp页面中的Java代码优势:不需要像java一样, 进行强制类型转换, 不需要处理null在EL中直接显示为空白 简洁 不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中     防止代码参杂用法:${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}     &amp;lt;不能包括特殊字符如.&amp;gt;       o">
+<meta property="og:description" content="监听器:主要监听:request---------class类实现接口ServletRequestListner session---------class类实现接口HttpSessionListener application---------class类实现接口ServletContextListener  在web容器启动时以运行init  三个对象每个监听器接口有两个方法:分别为init(">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-25T00:21:25.402Z">
+<meta property="og:updated_time" content="2019-12-10T23:55:25.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP">
-<meta name="twitter:description" content="JSP中的EL表达式EL表达式:用于替代jsp页面中的Java代码优势:不需要像java一样, 进行强制类型转换, 不需要处理null在EL中直接显示为空白 简洁 不需要&amp;lt;%%&amp;gt;表签,直接嵌入到jsp代码中     防止代码参杂用法:${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}     &amp;lt;不能包括特殊字符如.&amp;gt;       o">
+<meta name="twitter:description" content="监听器:主要监听:request---------class类实现接口ServletRequestListner session---------class类实现接口HttpSessionListener application---------class类实现接口ServletContextListener  在web容器启动时以运行init  三个对象每个监听器接口有两个方法:分别为init(">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,7 +154,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JSP11" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JSP15" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -166,57 +166,39 @@
   
 
         
-        <a href="/2019/11/26/JSP11/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+        <a href="/2019/12/11/JSP15/" class="archive-article-date">
+  	<time datetime="2019-12-11T07:01:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JSP中的EL表达式"><a href="#JSP中的EL表达式" class="headerlink" title="JSP中的EL表达式"></a>JSP中的EL表达式</h2><h3 id="EL表达式-用于替代jsp页面中的Java代码"><a href="#EL表达式-用于替代jsp页面中的Java代码" class="headerlink" title="EL表达式:用于替代jsp页面中的Java代码"></a>EL表达式:用于替代jsp页面中的Java代码<br></h3><h5 id="优势"><a href="#优势" class="headerlink" title="优势:"></a>优势:</h5><pre><code>不需要像java一样,
-进行强制类型转换,
-不需要处理null在EL中直接显示为空白
-简洁
-不需要&lt;%%&gt;表签,直接嵌入到jsp代码中    
-防止代码参杂</code></pre><h5 id="用法"><a href="#用法" class="headerlink" title="用法:"></a>用法:</h5><pre><code>${域对象.域对象中的属性.属性.属性.,,,,,,,,,,,,,,,,,,,,,,,,,}
-    &lt;不能包括特殊字符如.&gt;
-      or    
-${域对象[&apos;域对象中的属性&apos;][&apos;属性&apos;][&apos;属性&apos;].,,,,,,,,,,,,,,,,,,,,,,,,,}
-    &lt;能包括特殊字符如.&gt;&lt;br/&gt;
-    &lt;可获取变量值 ,这时[]中不加引号&apos;&apos;    加&apos;&apos;认为是常量&gt;
-    &lt;可获取数组元素  stu[1],stu[2].......&gt;
+        <h2 id="监听器"><a href="#监听器" class="headerlink" title="监听器:"></a>监听器:</h2><h4 id="主要监听"><a href="#主要监听" class="headerlink" title="主要监听:"></a>主要监听:</h4><pre><code>request---------class类实现接口ServletRequestListner
+session---------class类实现接口HttpSessionListener
+application---------class类实现接口ServletContextListener  在web容器启动时以运行init
 
- 获取Map属性
-${域对象.域对象中的map对象.属性名}
-    or
-${域对象.域对象中的map对象[&apos;属性名&apos;]}
+三个对象</code></pre><h4 id="每个监听器接口有两个方法"><a href="#每个监听器接口有两个方法" class="headerlink" title="每个监听器接口有两个方法:"></a>每个监听器接口有两个方法:</h4><h3 id="分别为init-初始化-和-destroy-销毁-方法"><a href="#分别为init-初始化-和-destroy-销毁-方法" class="headerlink" title="分别为init(初始化)   和   destroy(销毁)  方法"></a><em>分别为init(初始化)   和   destroy(销毁)  方法</em></h3><pre><code>inin方法在监听器被创建完毕时触发
 
-可直接在EL中计算:
-    gt          ne            eq           le        ge      lt
-    ${3 &gt; 2},${3 != 2},${3 == 2},${3 &lt;= 2},${3 &gt;= 2},${3 &lt; 2},
+destroy方法在监听器在被销毁前执行
+   */方法中的参数代表被监听的对象/*</code></pre><h4 id="需要去web-xml中配置"><a href="#需要去web-xml中配置" class="headerlink" title="需要去web.xml中配置"></a><em>需要去web.xml中配置</em></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">	&lt;display-name&gt;名&lt;/display-name&gt;//可选</span><br><span class="line">	&lt;listener-class&gt;监听器全路径&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure>
 
-    or          and         not
-    ${3 || 2},${3 &amp;&amp; 2}${3 ! 2},
+<blockquote>
+<h3 id="或者-注解-WebFilte-“”"><a href="#或者-注解-WebFilte-“”" class="headerlink" title="或者:注解   @WebFilte(“”)"></a>或者:注解   @WebFilte(“”)</h3></blockquote>
+<h4 id="请求request创建后在request结束后即销毁-超链接单击时也产生request-执行其他命令后-并销毁"><a href="#请求request创建后在request结束后即销毁-超链接单击时也产生request-执行其他命令后-并销毁" class="headerlink" title="请求request创建后在request结束后即销毁  ,   超链接单击时也产生request   执行其他命令后  并销毁"></a><em>请求request创建后在request结束后即销毁  ,   超链接单击时也产生request   执行其他命令后  并销毁</em></h4><h4 id="session在-请求后-由服务端-给每个客户端-都创建一个对应的session-存储客户信息"><a href="#session在-请求后-由服务端-给每个客户端-都创建一个对应的session-存储客户信息" class="headerlink" title="session在  请求后  由服务端  给每个客户端  都创建一个对应的session 存储客户信息"></a><em>session在  请求后  由服务端  给每个客户端  都创建一个对应的session 存储客户信息</em></h4><h4 id="application当web容器关闭时销毁"><a href="#application当web容器关闭时销毁" class="headerlink" title="application当web容器关闭时销毁"></a><em>application当web容器关闭时销毁</em></h4><hr>
+<blockquote>
+<blockquote>
+<h3 id="监听属性值变更"><a href="#监听属性值变更" class="headerlink" title="监听属性值变更:"></a>监听属性值变更:</h3><pre><code>request---------class类实现接口ServletRequestAttributeListner
+session---------class类实现接口HttpSessionAttributeListener
+application---------class类实现接口ServletContextAttributeListener  </code></pre></blockquote>
+</blockquote>
+<h4 id="每个接口由三个方法构成"><a href="#每个接口由三个方法构成" class="headerlink" title="每个接口由三个方法构成"></a><em>每个接口由三个方法构成</em></h4><h5 id="Added-增加一个属性"><a href="#Added-增加一个属性" class="headerlink" title="Added(增加一个属性)"></a>Added(增加一个属性)</h5><h5 id="Removed-删除一个属性"><a href="#Removed-删除一个属性" class="headerlink" title="Removed(删除一个属性)"></a>Removed(删除一个属性)</h5><h5 id="Repla-替换一个属性"><a href="#Repla-替换一个属性" class="headerlink" title="Repla(替换一个属性)"></a>Repla(替换一个属性)</h5><pre><code>方法中参数.getName()//获取目前在操作的属性名</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">监听application 方法中参数.getServletContext().getAttribute(目前在操作的属性名)  //获取目前在操作的属性值</span><br><span class="line"></span><br><span class="line">监听sessio 方法中参数.getSession().getAttribute(目前在操作的属性名)   //获取目前在操作的属性值</span><br><span class="line"></span><br><span class="line">监听reque 方法中参数.getServletRequest().getAttribute(目前在操作的属性名)   //获取目前在操作的属性值</span><br></pre></td></tr></table></figure>
 
-Empty运算符:用于判断一个值是否存在   存在有值返回false  / 为null或其他情况或不存在反回true 
-    ${empty 域对象.域对象中的map对象.属性名}</code></pre><h5 id="EL表达式的隐式对象"><a href="#EL表达式的隐式对象" class="headerlink" title="EL表达式的隐式对象:"></a>EL表达式的隐式对象:</h5><pre><code>a.作用域访问对象(EL  域对象)*
-pageScope    requestScope    sessionScope    applicationScope
-若用El取值时不指定域对象,则根据从    小范围   到   大范围    的顺序   依次取值
-如: ${requestScope.域对象中的map对象[&apos;属性名&apos;]}
+<h4 id="在web-xml中配置"><a href="#在web-xml中配置" class="headerlink" title="在web.xml中配置"></a><em>在web.xml中配置</em></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;listener&gt;</span><br><span class="line">	&lt;display-name&gt;名&lt;/display-name&gt;//可选</span><br><span class="line">	&lt;listener-class&gt;监听器全路径&lt;/listener-class&gt;</span><br><span class="line">&lt;/listener&gt;</span><br></pre></td></tr></table></figure>
 
-b.参数访问对象
-用于获取表单数据${param}                ${oaramValues}
-   对应于 repuest.getParameter()        repuest.getParameterValues()
-        单个表单数据            表单数组数据&lt;复选框..&gt;
-如: ${param.数据名}      ${param.数组数据名}    
+<blockquote>
+<h3 id="或者-注解-WebFilte-“”-1"><a href="#或者-注解-WebFilte-“”-1" class="headerlink" title="或者:注解   @WebFilte(“”)"></a>或者:注解   @WebFilte(“”)</h3></blockquote>
 
-也可获取超链接中传的值,地址栏中的值
-
-c.JSP隐式对象
-    pageContext
-通过此pageContext对象可拿到JSP中任意常见隐式对象
-如:  ${pageContext.session.下一个方法或对象...}    &lt;不是.getSession()&gt;</code></pre>
       
 
       
@@ -295,7 +277,7 @@ c.JSP隐式对象
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/26/JSP11/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/11/JSP15/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,7 +291,7 @@ c.JSP隐式对象
   
 <nav id="article-nav">
   
-    <a href="/2019/11/26/JSP12/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/14/JSP16/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -319,7 +301,7 @@ c.JSP隐式对象
     </a>
   
   
-    <a href="/2019/11/23/JSP9/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/12/06/JSP14/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">JSP</div>
       <i class="icon-circle-right"></i>
     </a>

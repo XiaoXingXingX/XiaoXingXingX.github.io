@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JSP的过滤器1234图例:                 &amp;lt;-----响应-----      在此处被拦截     &amp;lt;---------响应--------           客户端                        过滤器                               服务器	             ------请求------&amp;gt;    在此">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-05T02:05:24.980Z">
+<meta property="og:updated_time" content="2019-12-10T01:06:20.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP">
 <meta name="twitter:description" content="JSP的过滤器1234图例:                 &amp;lt;-----响应-----      在此处被拦截     &amp;lt;---------响应--------           客户端                        过滤器                               服务器	             ------请求------&amp;gt;    在此">
@@ -184,6 +184,8 @@
 </blockquote>
 <h4 id="需要在web-xml中配置才能生效配置流程如下-和配置servlet基本相同"><a href="#需要在web-xml中配置才能生效配置流程如下-和配置servlet基本相同" class="headerlink" title="需要在web.xml中配置才能生效配置流程如下(和配置servlet基本相同):"></a>需要在web.xml中配置才能生效配置流程如下(和配置servlet基本相同):</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">	&lt;filter-name&gt;中间桥梁名&lt;/filter-name&gt;</span><br><span class="line">	&lt;filter-class&gt;充当过滤器的class全地址&lt;/filter-class&gt;</span><br><span class="line">&lt;/filter&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">	&lt;filter-name&gt;中间桥梁名&lt;/filter-name&gt;</span><br><span class="line">	&lt;url-pattern&gt;</span><br><span class="line">	    /需要被拦截的(servlet请求名,指特定请求)请求名(/*指所有请求)</span><br><span class="line">	   REQUEST    http请求</span><br><span class="line">	   FORWARD    转发请求</span><br><span class="line">	   INCLUDE     request.getRequestDispatcher(&apos;&apos;&apos;).include()  或&lt;jsp:include page=&quot;&quot;&gt;请求</span><br><span class="line">	   ERROR     &lt;error-page&gt;请求</span><br><span class="line">	&lt;/url-pattern&gt;</span><br><span class="line">&lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<h3 id="或者-注解-WebFilte-“”"><a href="#或者-注解-WebFilte-“”" class="headerlink" title="或者:注解   @WebFilte(“”)"></a>或者:注解   @WebFilte(“”)</h3></blockquote>
 <h4 id="若用重定向方法跳转-则会被拦截两次-一次访问-重新访问"><a href="#若用重定向方法跳转-则会被拦截两次-一次访问-重新访问" class="headerlink" title="/若用重定向方法跳转,则会被拦截两次  一次访问-重新访问/"></a><em>/若用重定向方法跳转,则会被拦截两次  一次访问-重新访问/</em></h4><h4 id="doFilter方法"><a href="#doFilter方法" class="headerlink" title="doFilter方法:"></a>doFilter方法:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">请求代码</span><br><span class="line">chian.doFilter(request,response);  </span><br><span class="line">放行equest,response不一定全放行  使servlet中逻辑正常执行后,执行响应代码</span><br><span class="line">响应代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="可多重过滤-过滤器执行顺序-依照web-xml中配置顺序-依次执行"><a href="#可多重过滤-过滤器执行顺序-依照web-xml中配置顺序-依次执行" class="headerlink" title="/可多重过滤  过滤器执行顺序  依照web.xml中配置顺序  依次执行/"></a><em>/可多重过滤  过滤器执行顺序  依照web.xml中配置顺序  依次执行/</em></h4>
@@ -289,7 +291,7 @@
     </a>
   
   
-    <a href="/2019/11/26/JSP11/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/26/JSP10/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">JSP</div>
       <i class="icon-circle-right"></i>
     </a>
