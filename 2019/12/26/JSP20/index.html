@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MySQL | 小星星-x的博客</title>
+  <title>小星星-x的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL分页sql语句要实现分页要严格依赖SQL语句:    前提:知道    那一页的数据从  何处开始   从  何处结束      使用sql关键字  limit n,x;     *(第n行开始  取 x条数据)*  第n页            开始行号            结束行号     1            0            9 2            10">
+  <meta name="description" content="小星星">
 <meta name="keywords" content="小星星,个人博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL">
-<meta property="og:url" content="http://yoursite.com/2019/11/26/JSP10/index.html">
+<meta property="og:title" content="小星星-x的博客">
+<meta property="og:url" content="http://yoursite.com/2019/12/26/JSP20/index.html">
 <meta property="og:site_name" content="小星星-x的博客">
-<meta property="og:description" content="MySQL分页sql语句要实现分页要严格依赖SQL语句:    前提:知道    那一页的数据从  何处开始   从  何处结束      使用sql关键字  limit n,x;     *(第n行开始  取 x条数据)*  第n页            开始行号            结束行号     1            0            9 2            10">
+<meta property="og:description" content="小星星">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-19T02:52:18.838Z">
+<meta property="og:updated_time" content="2019-12-24T23:59:15.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL">
-<meta name="twitter:description" content="MySQL分页sql语句要实现分页要严格依赖SQL语句:    前提:知道    那一页的数据从  何处开始   从  何处结束      使用sql关键字  limit n,x;     *(第n行开始  取 x条数据)*  第n页            开始行号            结束行号     1            0            9 2            10">
+<meta name="twitter:title" content="小星星-x的博客">
+<meta name="twitter:description" content="小星星">
   
     <link rel="alternative" href="/atom.xml" title="小星星-x的博客" type="application/atom+xml">
   
@@ -166,58 +166,12 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JSP10" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JSP20" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      MySQL
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/JSP10/" class="archive-article-date">
-  	<time datetime="2019-11-26T12:11:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="MySQL分页sql语句"><a href="#MySQL分页sql语句" class="headerlink" title="MySQL分页sql语句"></a>MySQL分页sql语句</h2><p>要实现分页要严格依赖SQL语句:<br>    前提:知道    那一页的数据从  何处开始   从  何处结束  </p>
-<pre><code>   使用sql关键字  limit n,x;
-    *(第n行开始  取 x条数据)*
-
-第n页            开始行号            结束行号    
-1            0            9
-2            10            19
-3            20            29
-.............................
-n            (n-1)*10            n*10-1
-
-转化为sql语句为:
-    select * from user limit 0,10;
-    select * from user limit 10,10;
-    select * from user limit 20,10;
-    .................................
-    select * from user limit (n-1)*10,10;
-
-即:   select * from user limit  &lt;页数*页面大小(每页行数)&gt;,&lt;页面大小(每页行数)&gt;;</code></pre><p>在dao及servle中使用:</p>
-<pre><code>需要数据:&lt;顺序&gt;
-    1.数据总量                &lt;查询数据库得知,select count(*)...;用rs保存&gt;
-    2.页面大小(每页行数)                &lt;自定义&gt;
-    3.总页数                    &lt;程序计算&gt;
-    总页数= 100/20=数据总数/页面大小=5页
-    总页数= 103/20=数据总数/页面大小=5.6--&gt;5+1页
-    总页数=数据总数%页面大小==0? 数据总数/页面大小:数据总数/页面大小+1
-    判断是否除尽根据是否除尽,执行不同操作
-
-    4.当前页码                &lt;自定义&gt;
-    由jsp页面传入
-
-    5.当前页所显示的数据对象集合(实体类集合)    &lt;查询得知&gt;</code></pre>
+        
       
 
       
@@ -296,7 +250,7 @@ n            (n-1)*10            n*10-1
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/26/JSP10/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/26/JSP20/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +264,9 @@ n            (n-1)*10            n*10-1
   
 <nav id="article-nav">
   
-    <a href="/2019/11/26/JSP11/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JSP
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/26/JSP12/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">JSP</div>
+    <a href="/2019/12/24/JSP19/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -348,7 +293,7 @@ n            (n-1)*10            n*10-1
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL分页sql语句"><span class="toc-number">1.</span> <span class="toc-text">MySQL分页sql语句</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
